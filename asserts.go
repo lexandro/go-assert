@@ -2,32 +2,32 @@
 package assert
 
 import (
-	"testing"
 	"reflect"
 	"strings"
+	"testing"
 )
 
 // kindFormatters is a map of assignments of data types and their formatters.
 var kindFormatters = map[reflect.Kind]string{
-	reflect.Uint:"%d",
-	reflect.Uint8:"%d",
-	reflect.Uint16:"%d",
-	reflect.Uint32:"%d",
-	reflect.Uint64:"%d",
-	reflect.Int:"%d",
-	reflect.Int8:"%d",
-	reflect.Int16:"%d",
-	reflect.Int32:"%d",
-	reflect.Int64:"%d",
-	reflect.Float32:"%f",
-	reflect.Float64:"%f",
-	reflect.Complex64:"%g",
-	reflect.Complex128:"%g",
-	reflect.Bool:"%t",
-	reflect.String:"%s",
-	reflect.Slice:"%#v",
-	reflect.Array:"%#v",
-	reflect.Ptr:"%#v",
+	reflect.Uint:       "%d",
+	reflect.Uint8:      "%d",
+	reflect.Uint16:     "%d",
+	reflect.Uint32:     "%d",
+	reflect.Uint64:     "%d",
+	reflect.Int:        "%d",
+	reflect.Int8:       "%d",
+	reflect.Int16:      "%d",
+	reflect.Int32:      "%d",
+	reflect.Int64:      "%d",
+	reflect.Float32:    "%f",
+	reflect.Float64:    "%f",
+	reflect.Complex64:  "%g",
+	reflect.Complex128: "%g",
+	reflect.Bool:       "%t",
+	reflect.String:     "%s",
+	reflect.Slice:      "%#v",
+	reflect.Array:      "%#v",
+	reflect.Ptr:        "%#v",
 }
 
 // Equals asserts the equality of the given arguments
@@ -101,7 +101,7 @@ func IsFalse(t *testing.T, v bool) bool {
 	if v {
 		t.Errorf("Expected false, but was: <%v>", v)
 	}
-	return ! v
+	return !v
 }
 
 // Error uses the formatter map to display the given error message with readable formatting.
@@ -134,6 +134,7 @@ func isEqual(exp interface{}, act interface{}) (result bool) {
 	}
 	return
 }
+
 // getTypeFormat is an internal function to provide the formatter string for the given data type.
 //
 //   getTypeFormat(reflect.Uint)
