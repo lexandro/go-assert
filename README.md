@@ -4,20 +4,24 @@
 
 Simple assertion library for unit testing in Golang without vendoring/dependencies.
 
-Design principles:
+## Design principles:
 
  * No additional dependencies
- * Readibility
+ * Readability 
 
-# Installation
+[Check the documentation](https://godoc.org/github.com/lexandro/go-assert) about the available features/functions
+
+## Installation and update
+
+Installation:
 
 `go get github.com/lexandro/go-assert`
 
-# Update
+Update:
 
 `go get -u github.com/lexandro/go-assert`
 
-# Usage
+## Usage
 ```go
 // required imports
 import (
@@ -56,10 +60,9 @@ func Test_IsFalse(t *testing.T) {
 }
 ```
 
-# TODO:
+## TODO:
 assert.IsEmpty
 
-Contributing
-============
+# Contributing
 
 We would love for you to contribute to go-assert. Fork the repository and send a PR with the fix or report any issues!
