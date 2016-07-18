@@ -4,16 +4,6 @@ import (
 	"testing"
 )
 
-
-/*
-assert.Equals
-assert.IsTrue
-assert.IsFalse
-assert.IsEmpty
-
-
-*/
-
 var testInt1 int = 11
 var testInt2 int = 12
 
@@ -79,7 +69,6 @@ func Test_Equals(t *testing.T) {
 			t.Fail()
 		}
 	}
-
 }
 
 func Test_NotEquals(t *testing.T) {
@@ -89,6 +78,31 @@ func Test_NotEquals(t *testing.T) {
 		if !NotEquals(t, etp.exp, etp.act) {
 			t.Fail()
 		}
+	}
+}
+
+func Test_IsNil(t *testing.T) {
+	if !IsNil(t, nil) {
+		t.Fail()
+	}
+}
+
+func Test_IsNotNil(t *testing.T) {
+	if !IsNotNil(t, 1) {
+		t.Fail()
+	}
+}
+
+func Test_IsTrue(t *testing.T) {
+	if !IsTrue(t, true) {
+		t.Fail()
+	}
+
+}
+
+func Test_IsFalse(t *testing.T) {
+	if !IsFalse(t, false) {
+		t.Fail()
 	}
 }
 
@@ -106,13 +120,3 @@ func Test_Comparator(t *testing.T) {
 	}
 }
 
-func Test_IsNil(t *testing.T) {
-	if !IsNil(t, nil) {
-		t.Fail()
-	}
-}
-func Test_IsNotNil(t *testing.T) {
-	if !IsNotNil(t, 1) {
-		t.Fail()
-	}
-}
