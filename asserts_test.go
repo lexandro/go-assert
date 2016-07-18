@@ -30,8 +30,8 @@ var EqualsTestParams = []struct {
 	{byte(15), byte(15)},
 	{rune(16384), rune(16384)},
 	{[4]int8{1, 2, 3, 4}, [4]int8{1, 2, 3, 4}}, // array
-	{[]int8{5, 6, 7, 8}, []int8{5, 6, 7, 8}}, // slice
-	{&testInt1, &testInt1}, // ptr
+	{[]int8{5, 6, 7, 8}, []int8{5, 6, 7, 8}},   // slice
+	{&testInt1, &testInt1},                     // ptr
 
 }
 
@@ -58,8 +58,8 @@ var NotEqualsTestParams = []struct {
 	{byte(15), byte(14)},
 	{rune(16384), rune(16383)},
 	{[4]int8{1, 2, 3, 4}, [4]int8{1, 2, 3, 5}}, // array
-	{[]int8{5, 6, 7, 8}, []int8{5, 6, 7, 9}}, // slice
-	{&testInt1, &testInt2}, // ptr
+	{[]int8{5, 6, 7, 8}, []int8{5, 6, 7, 9}},   // slice
+	{&testInt1, &testInt2},                     // ptr
 
 }
 
