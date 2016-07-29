@@ -38,7 +38,7 @@ var kindFormatters = map[reflect.Kind]string{
 func Equals(t *testing.T, exp interface{}, act interface{}) (result bool) {
 	result = isEqual(exp, act)
 	if !result {
-		error(t, "Values should be equal. Expected same <%e> was not: <%a>", exp, act)
+		error(t, "Values should be equal. Expected: <%e>, but was: <%a>", exp, act)
 	}
 	return
 }
